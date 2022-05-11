@@ -12,6 +12,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------- HEADER -------- */
 
 header {
@@ -54,13 +62,16 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li {
+header nav ul a {
     margin-right: 50px;
+}
+
+header nav ul li {
     color: #fff;
     cursor: pointer;
 }
 
-header nav ul li:last-child {
+header nav ul a:last-child {
     margin-right: 0;
 }
 
@@ -137,11 +148,6 @@ section.info .box-info a:hover {
 
 /* ---------- SOBRE -------- */
 
-section.sobre {
-    width: 100%;
-
-}
-
 section.sobre .content {
     width: 100%;
     max-width: 1080px;
@@ -186,4 +192,96 @@ section.sobre .content .box-sobre p {
     font-size: 18px;
     color: #A9A9A9;
     line-height: 28px;
+}
+
+/* ---------- PORTFOLIO -------- */
+
+section.portfolio {
+    margin-bottom: 50px;
+}
+
+section.portfolio .content {
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 69px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section.portfolio .content h1 {
+    font-size: 30px;
+    color: #0C2461;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+section.portfolio .content h1::before {
+    content: '';
+    width: calc(131px + 30px);
+    height: 5px;
+    background-color: #FA983A;
+    position: absolute;
+    bottom: 0;
+}
+
+section.portfolio .content .box-projetos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+section.portfolio .content .box-projetos .item-projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.portfolio .content .box-projetos .item-projeto strong {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #484848;
+    font-weight: 400;
+}
+
+/* ---------- CONTATO -------- */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #7159c1;
+
+    display: flex;
+    align-items: center;
+}
+
+footer .content {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .content strong {
+    color: #fff;
+    font-size: 18px;
+}
+
+footer .content a {
+    color: #FA983A;
+    font-size: 18px;
+}
+
+footer .content .redes-sociais img {
+    margin-right: 21px;
+}
+
+footer .content .redes-sociais img:last-child {
+    margin-right: 0;
 }
